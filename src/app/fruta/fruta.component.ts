@@ -9,4 +9,11 @@ import {Component} from '@angular/core';
 export class FrutaComponent{
     public nombre_componente= 'Componente de fruta'
     public listado_frutas= 'Naranja, Manzana, Pera y Sandia'
+
+    public nombre:String = 'juan';
+    public edad: Number = 24;
+    public isMayorEdad:Boolean = true;
+    public trabajos:Array<any> = ['soldador','mesero'];
+    comodin:any =23;
+
 }
