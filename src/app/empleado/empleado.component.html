@@ -1,3 +1,21 @@
 <div>
-  <p>{{empleado.nombre}}</p>
+  <p>{{titulo}}</p>
 </div>
+
+
+<strong>Empleado estrella:</strong>
+
+<ul *ngIf="tabajador_externo == true">
+  <li>{{trabajadores[0].nombre}}</li>
+  <li>{{trabajadores[0].edad}}</li>
+  <li>{{trabajadores[0].cargo}}</li>
+  <li>{{trabajadores[0].contratado}}</li>
+</ul>
+
+
+<ul *ngIf="tabajador_externo == false">
+  <li>{{empleado.nombre}}</li>
+  <li>{{empleado.edad}}</li>
+  <li>{{empleado.cargo}}</li>
+  <li>{{empleado.contratado}}</li>
+</ul>
