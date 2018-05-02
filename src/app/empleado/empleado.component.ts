@@ -31,4 +31,9 @@ export class EmpleadoComponent implements OnInit {
 
   }
 
+
+  cambiarExterno(valor)  {
+    this.tabajador_externo = valor;   
+  }
+
 }
