@@ -17,6 +17,7 @@
   </ul>
 </div>
 
+<hr/>
 <div *ngIf="tabajador_externo == false">
   <button (click)="cambiarExterno(true)">Mostrar trabajador</button>
   <ul>
@@ -28,7 +29,7 @@
   </ul>
 </div>
 
-
+<hr/>
 <h3>Listado de empleados</h3>
 <ul>
   <li *ngFor="let empleado of trabajadores; let i = index">
@@ -42,3 +43,21 @@
     </ul>
   </li>
 </ul>
+
+<hr/>
+<h3>Colores switch</h3>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{'background':color, 
+  'color': 'white'}">
+    Es de color {{color}}
+  </li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{'background':color, 
+  'color': 'white'}">
+    Es de color {{color}}
+  </li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{'background':color, 
+  'color': 'white'}">
+    Es de color {{color}}
+  </li>
+</ul>
+

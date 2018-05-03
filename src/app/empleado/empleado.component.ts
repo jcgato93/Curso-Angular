@@ -15,6 +15,7 @@ export class EmpleadoComponent implements OnInit {
   public empleado: Empleado;
   public trabajadores: Array<Empleado>;
   public tabajador_externo: Boolean;
+  public color: String;
 
   constructor() {
     this.empleado = new Empleado('David Lopez', 45, 'Cocinero', true);
@@ -25,6 +26,7 @@ export class EmpleadoComponent implements OnInit {
     ];
 
     this.tabajador_externo = true;
+    this.color = 'blue';
   }
 
   ngOnInit() {
