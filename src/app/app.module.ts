@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+//import rutas
+import { routing, appRoutingProvaiders } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { FrutaComponent} from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
@@ -19,9 +22,12 @@ import { EmpleadoComponent } from './empleado/empleado.component';
     BrowserModule,
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing//rutas
   ],
-  providers: [],
+  providers: [
+    appRoutingProvaiders//provee configuracion de rutas
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
