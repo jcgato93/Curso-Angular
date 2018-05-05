@@ -4,13 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 //importar componentes
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
+import { HomeComponent } from './home/home.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 //array de rutas
 const appRoutes: Routes = [
-    {path : '', component: EmpleadoComponent},//cuando no se escriba la ruta especifica llamara al componente que se pase por parametro
+    {path : '', component: HomeComponent},//cuando no se escriba la ruta especifica llamara al componente que se pase por parametro
+    {path: 'home', component: HomeComponent},
     {path: 'empleado', component: EmpleadoComponent},
     {path: 'fruta', component: FrutaComponent},
-    {path: '**', component: EmpleadoComponent} //cuando la rute falle, errores como el 404
+    {path: 'contacto', component: ContactoComponent},
+
+
+    {path: '**', component: HomeComponent} //cuando la rute falle, errores como el 404
 ];
 
 
