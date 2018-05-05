@@ -6,7 +6,21 @@
 <h3>Selector de colores:</h3>
 <input type="text" [(ngModel)]="color_seleccionado" />
 
-<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid white' ">
+<!-- 
+La forma de implementar el ngClass son las siguientes
+ la primera es segun se cumpla una condicion se establecera una clase
+   ej : fondoAzul: color_seleccionado == 'blue',  se estableceria la clase fondo azul si color seleccionado  es igual a 'blue'
+
+ la otra forma es con un array de las clases que se desean aplicar
+   [ngClass]="['fondoAzul','letraGrande']"
+ -->
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid white' "   
+    [ngClass]="{
+     fondoAzul: color_seleccionado == 'blue',
+     fondoVerde: color_seleccionado == 'green',
+     letraGrande: 1==1
+   }"   
+>
   <strong>Color elegido</strong>
   {{color_seleccionado}}
 </pre>
