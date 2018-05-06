@@ -25,7 +25,16 @@ export class ContactoComponent  {
     this._route.params.forEach((params: Params) => {
         this.parametro = params['page'];
     })
-
   }
 
+
+  //para redirigir pasando un parametro
+  redirigir(){
+    this._router.navigate(['/contacto','parametroPasado']);
+  }
+
+  //para redirigir sin parametros
+  redirigirDos(){    
+    this._router.navigate(['/home']);
+  }
 }

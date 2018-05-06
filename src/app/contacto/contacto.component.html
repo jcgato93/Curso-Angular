@@ -6,3 +6,9 @@
 <div *ngIf= "parametro">
   <p>El parametro de la url es :  {{parametro}}</p>
 </div>
+
+<!-- si el parametro esta vacio -->
+<div *ngIf= "!parametro">
+  <button (click)="redirigir()">Redirigir a pagina con parametros</button>
+  <button (click)="redirigirDos()">Home</button>
+</div>
