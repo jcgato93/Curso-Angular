@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
+//Pipes 
+import { ConversorPipe } from './pipes/conversor.pipe'; 
+
 //import rutas
 import { routing, appRoutingProvaiders } from './app.routing';
 
@@ -20,7 +24,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent    
+    ContactoComponent,
+    ConversorPipe   
   ],
   imports: [
     BrowserModule,
