@@ -1,18 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Coche } from './coches';
 
+//Servicios
+import { PeticionesService } from '../Services/peticiones.service';
+
 
 @Component({
   selector: 'app-coches',
   templateUrl: './coches.component.html',
-  styleUrls: ['./coches.component.css']
+  styleUrls: ['./coches.component.css'],
+  providers: [PeticionesService]
+  
 })
 export class CochesComponent implements OnInit {
 
   public coche: Coche;
   public coches: Array<Coche>;
 
-  constructor() {
+  public articulos;
+
+  constructor(
+    private _peticionesService: PeticionesService
+  ) {
     this.coche = new Coche("","","");
 
     this.coches = [
@@ -22,6 +31,17 @@ export class CochesComponent implements OnInit {
    }
 
   ngOnInit() {
+    this._peticionesService.getArticulos().subscribe(
+      result =>{
+        this.articulos = result;
+        console.log(result);
+      },
+      error => {
+        var errorMessage = <any>error;
+        console.log(errorMessage);
+      }
+
+    );
   }
 
 
