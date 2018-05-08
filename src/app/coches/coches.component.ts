@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Coches } from './coches';
+import { Coche } from './coches';
 
 
 @Component({
@@ -9,10 +9,16 @@ import { Coches } from './coches';
 })
 export class CochesComponent implements OnInit {
 
-  public coche: Coches;
+  public coche: Coche;
+  public coches: Array<Coche>;
 
   constructor() {
-    this.coche = new Coches("","","");
+    this.coche = new Coche("","","");
+
+    this.coches = [
+      new Coche("Seat Panda","120","Blanco"),
+      new Coche("Renaut Clio","110","Azul")
+    ]
    }
 
   ngOnInit() {
@@ -20,7 +26,8 @@ export class CochesComponent implements OnInit {
 
 
   onSubmit(){
-    console.log(this.coche);
+    this.coches.push(this.coche);
+    this.coche = new Coche("","","");
   }
 
 }

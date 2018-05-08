@@ -1,4 +1,4 @@
-export class Coches{
+export class Coche{
 
     constructor(
         public nombre:string,
