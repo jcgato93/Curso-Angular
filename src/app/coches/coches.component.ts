@@ -34,7 +34,9 @@ export class CochesComponent implements OnInit {
     this._peticionesService.getArticulos().subscribe(
       result =>{
         this.articulos = result;
-        console.log(result);
+        if (!this.articulos) {
+          console.log("Erro en el servidor");
+        }
       },
       error => {
         var errorMessage = <any>error;

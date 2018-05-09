@@ -56,3 +56,13 @@ div{
       </li>
     </ul>
 </div>
+
+<div style="margin-left: 30px">
+  <h3>Listado de articulos</h3>
+  <ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos">
+      {{articulo.id}} - {{articulo.title}}
+    </li>
+  </ul>
+  <span *ngIf="!articulos">Cargando...</span>
+</div>
