@@ -21,6 +21,6 @@ export class PeticionesService{
 
     getArticulos(){
         return this._http.get(this.url)
-                            .map(res => res.json())//recoger respuesta http y la convierte en json usable para javascript
+                   .map(res => res.json())//recoger respuesta http y la convierte en json usable para javascript
     }
 }

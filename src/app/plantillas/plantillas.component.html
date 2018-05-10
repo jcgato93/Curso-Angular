@@ -1,0 +1,17 @@
+<h4>
+  {{titulo}}
+</h4>
+
+<button (click)="cambiar()">Cambiar</button>
+
+<div *ngIf="administrador; else noAdmin"> <!--si no se cumple la condicion se puede especificar la siguiente validacion 
+                                            con ng-Template-->
+  <strong style="background: yellow;">Eres administrador</strong>
+</div>
+
+
+<ng-template  #noAdmin>
+<div>
+  <strong style="background: red; color: white;">NO eres administrador</strong>
+</div>
+</ng-template>
