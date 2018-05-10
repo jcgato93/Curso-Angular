@@ -4,11 +4,15 @@
 
 <button (click)="cambiar()">Cambiar</button>
 
-<div *ngIf="administrador; else noAdmin"> <!--si no se cumple la condicion se puede especificar la siguiente validacion 
-                                            con ng-Template-->
-  <strong style="background: yellow;">Eres administrador</strong>
+<div *ngIf="administrador; then admin else noAdmin"> <!--si no se cumple la condicion se puede especificar la siguiente validacion 
+                                            con ng-Template-->  
 </div>
 
+<ng-template #admin>
+  <div>
+    <strong style="background: yellow;">Eres administrador</strong>
+  </div>
+</ng-template>
 
 <ng-template  #noAdmin>
 <div>
