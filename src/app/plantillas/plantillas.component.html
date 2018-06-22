@@ -19,3 +19,22 @@
   <strong style="background: red; color: white;">NO eres administrador</strong>
 </div>
 </ng-template>
+
+
+<br/>
+<hr/>
+<h4>Propiedades input en Angular</h4>
+
+<!--para pasar el parametro al componente hijo solo se declara la propidad y su valor
+Nota : el valor se envia entre comillas simples , amenos que se este enviando una propidad-->
+<componente-hijo 
+[propiedad_uno]="'valor de la propiedad uno'"
+[texto]="'valor de la propiedad dos'"  
+[propiedad_tres]="dato_externo"
+[propiedad_4]="identity.web"   
+[propiedad_5]="identity"   
+
+>
+</componente-hijo>
+
+<hr/>
