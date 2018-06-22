@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+//EventEmitter para poder maneno de eventos de salida
 
 @Component({
     selector: 'componente-hijo',
@@ -12,6 +12,8 @@ import { Component, Input } from '@angular/core';
     <li>{{propiedad_tres}}</li>
     <li>{{propiedad_4}}</li>
     </ul>
+
+    <button (click)="enviar()">Enviar datos al padre</button>
     `
 })
 export class HijoComponent{
@@ -25,6 +27,10 @@ export class HijoComponent{
     @Input() propiedad_4: string;
     @Input() propiedad_5: string;
 
+
+   //Propiedades de salida
+   @Output() desde_el_hijo=new EventEmitter();
+
     constructor(){
         this.title="Componente Hijo"
     }
@@ -32,5 +38,16 @@ export class HijoComponent{
     ngOnInit(){
         console.log(this.propiedad_5);
     }
+
+
+    //usa el EventEmitter para enviar informacion como output
+    enviar(){
+        this.desde_el_hijo.emit({
+            nombre:'desde el hijo' ,
+            web:'www.test.com'   
+    });
+    }
+
+
 
 }

@@ -30,4 +30,15 @@ public identity={
     this.administrador=!this.administrador;
   }
 
+
+
+  public datos_del_hijo;
+
+  recibirDatos(event){    
+    console.log(event);
+    this.datos_del_hijo = event;
+  }
+
+
+
 }

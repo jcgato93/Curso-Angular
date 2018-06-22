@@ -34,7 +34,17 @@ Nota : el valor se envia entre comillas simples , amenos que se este enviando un
 [propiedad_4]="identity.web"   
 [propiedad_5]="identity"   
 
+
+(desde_el_hijo)="recibirDatos($event)"
 >
+<!--(desde_el_hijo) define el evento de salida del componente
+este llamara un evento del objeto padre 'recibirDatos' que reciva los datos que llegan del 
+componente hijo-->
 </componente-hijo>
 
 <hr/>
+
+<div *ngIf="datos_del_hijo">
+  <h1>{{datos_del_hijo.nombre}}</h1>
+  <h1>{{datos_del_hijo.web}}</h1>
+</div>
