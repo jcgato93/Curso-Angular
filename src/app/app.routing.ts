@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from './coches/coches.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
+import { UsoJqueryComponent } from './uso-jquery/uso-jquery.component';
 
 //array de rutas
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     {path: 'contacto/:page', component: ContactoComponent},
     {path: 'coches', component: CochesComponent},
     {path: 'plantillas', component: PlantillasComponent},
+    {path: 'usoJquery', component: UsoJqueryComponent},
 
 
     {path: '**', component: HomeComponent} //cuando la rute falle, errores como el 404

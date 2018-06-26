@@ -19,6 +19,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from './coches/coches.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { UsoJqueryComponent } from './uso-jquery/uso-jquery.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HijoComponent } from './hijo/hijo.component';
     ConversorPipe,//pipe personalizado
     CochesComponent,
     PlantillasComponent,
-    HijoComponent   
+    HijoComponent,
+    UsoJqueryComponent,       
   ],
   imports: [
     BrowserModule,
